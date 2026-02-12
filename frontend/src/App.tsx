@@ -56,7 +56,6 @@ export default function App() {
     };
   }
 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", {
@@ -76,7 +75,11 @@ export default function App() {
 
     setLoading(true);
     try {
-      const summary = await generateSummary(formData.description);
+      const summary = await generateSummary(
+        formData.description,
+        formData.urgency || "medium",
+      );
+
       setAiSummary(summary);
     } catch (error) {
       console.error("Error generating summary:", error);
