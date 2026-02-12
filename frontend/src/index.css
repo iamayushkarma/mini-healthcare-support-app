@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: #fff9ee;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 @theme {
   /* Primary Colors */
   --color-primary: #13a4ec;
