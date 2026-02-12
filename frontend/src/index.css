@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Colors */
+  --color-primary: #13a4ec;
+  --color-primary-light: #33bbf5;
+  --color-primary-lighter: #e6f6fd;
+  --color-primary-dark: #0f8dc9;
+  --color-primary-darker: #0c6fa0;
+
+  /* Secondary/Accent Colors */
+  --color-secondary: #10b981;
+  --color-accent: #0ea5e9;
+  --color-accent-alt: #6366f1;
+
+  /* Neutral Colors */
+  --color-background: #f6f7f8;
+  --color-surface: #ffffff;
+  --color-surface-light: #f9fafb;
+  --color-border: #e2e8f0;
+  --color-divider: #f1f5f9;
+
+  /* Text Colors */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #94a3b8;
+  --color-text-disabled: #cbd5f5;
+  --color-text-on-primary: #ffffff;
+
+  /* Semantic Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #13a4ec;
+
+  /* Interactive States */
+  --color-hover: #33bbf5;
+  --color-active: #0f8dc9;
+  --color-focus: #0ea5e9;
+  --color-disabled: #e5e7eb;
+
+  /* Shadows & Overlays */
+  --shadow-sm: 0 1px 2px rgba(15, 141, 201, 0.1);
+  --shadow-md: 0 4px 6px rgba(15, 141, 201, 0.15);
+  --shadow-lg: 0 10px 25px rgba(15, 141, 201, 0.2);
+  --overlay: rgba(19, 164, 236, 0.1);
+}
