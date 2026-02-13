@@ -1,5 +1,6 @@
+import { server_url } from "../constants";
 export async function generateSummary(text: string, urgency: string) {
-  const response = await fetch("http://localhost:5000/api/summarize", {
+  const response = await fetch(`${server_url}/api/summarize`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
