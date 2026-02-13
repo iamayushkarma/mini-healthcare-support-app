@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Mini Healthcare Support Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A concept-level healthcare support web application designed to help patients request assistance, volunteers register, and users contact an NGO through an AI-assisted form workflow.
 
-Currently, two official plugins are available:
+This project demonstrates how AI can improve healthcare support systems by summarizing user requests and helping organizations quickly understand and prioritize incoming cases.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+### Frontend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Component-based architecture
 
-## Expanding the ESLint configuration
+### Backend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js + Express
+- REST API
+- Environment-based configuration
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### AI Integration
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Groq API (Llama 3.3 model)
+- AI-powered request summarization
+- Structured healthcare analysis output
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Features
+
+- Patient support request form
+- Volunteer registration form
+- General inquiry form
+- Dynamic form fields based on user type
+- AI-generated structured summary:
+  - Request summary
+  - Urgency level (based on user selection)
+  - Suggested next actions
+- Responsive design
+- Clean NGO-focused UI
+
+## AI Idea (Concept)
+
+The application uses AI to:
+
+- Automatically summarize healthcare support requests
+- Convert long user descriptions into structured actionable information
+- Help NGOs quickly review and understand cases without reading long messages
+
+This improves efficiency and reduces response time for healthcare support teams.
+
+## NGO Use Case
+
+Healthcare NGOs often receive many support requests with detailed descriptions. Manually reading each message can slow down response times.
+
+This system helps by:
+
+- Structuring requests automatically
+- Highlighting urgency levels
+- Suggesting initial next steps
+
+This allows volunteers or staff to prioritize and respond more effectively.
+
+## Running Locally
+
+### Backend
+
+```bash
+cd backend
+npm install
+node server.js
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Create `.env`:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+GROQ_API_KEY=your_api_key
 ```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Live Demo
+
+[Visit CareConnect AI](https://careconnectai.vercel.app/)
+
+## Author
+
+**Ayush Karma**
